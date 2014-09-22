@@ -70,7 +70,7 @@ function show_form_container(container) {
 }
 
 function toggle_top_container_visibility() {
-	if (top_container.hasClass('visible')) 
+	if (top_container.hasClass('visible'))
 		top_container.removeClass('visible').slideUp(); else
 		top_container.addClass('visible').slideDown();
 }
@@ -282,6 +282,10 @@ $(function() {
 		// show form
 		show_form_container(container);
 	});
+
+	// show login window if hash is provided
+	if (window.location.hash == '#login')
+		$('a.login').trigger('click');
 
 	// show password recovery form
 	$('a.password-recovery').click(function(event) {

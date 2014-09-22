@@ -12,12 +12,20 @@
 			<cms:script src="_BASEURL.'/site/scripts/widget.min.js'" cms:eval="src"/>
 			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
 			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:module
+				name="test"
+				action="show_me_nigga"
+				whatever="17"
+			/>
+
 			<header>
 				<div class="inner_wrap">
+					<a class="login_button" href="https://sapphirewaves.com#login"><cms:text constant="login"/></a>
 					<span><cms:text constant="header_upper_text"/></span>
 					<h3><cms:text constant="header_h1"/></h3>
 					<div class="call_to_action">
@@ -114,7 +122,14 @@
 							action="show_list"
 							text_id="testimonials_wrap_color"
 							template="parts/article.xml"
-							/>
+						/>
+						<cms:mobile>
+							<nav>
+								<a href="javascript: void(0);" class="active"></a>
+								<a href="javascript: void(0);"></a>
+								<a href="javascript: void(0);"></a>
+							</nav>
+						</cms:mobile>
 					</div>
 					<h2><cms:text constant="checkout"/></h2>
 					<h5><cms:text constant="tracy"/></h5>

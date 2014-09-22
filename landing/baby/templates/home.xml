@@ -25,6 +25,7 @@
 
 			<header>
 				<div class="inner_wrap">
+					<a class="login_button" href="https://sapphirewaves.com#login"><cms:text constant="login"/></a>
 					<span><cms:text constant="header_upper_text"/></span>
 					<h3><cms:text constant="header_h1"/></h3>
 					<div class="call_to_action">
