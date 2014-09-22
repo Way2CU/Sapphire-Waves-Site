@@ -1,0 +1,115 @@
+/**
+ * Footer Style Sheet
+ * Sapphire Waves
+ *
+ * Copyright (c) 2013. by Way2CU
+ * Author: Mladen Mijatov
+ */
+
+footer {
+	display: block;
+
+	border-top: 1px solid #56a1d8;
+	background-color: #14558c;
+	background-image: url(../images/footer.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.3);
+
+	color: white;
+}
+
+footer div.wrap {
+	display: block;
+	position: relative;
+	width: 700px;
+	height: 602px;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 400px;
+	padding-top: 60px;
+}
+
+footer div.wrap h1 {
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 20px;
+
+	color: #14558c;
+	font-size: 4em;
+	text-transform: uppercase;
+}
+
+footer div.wrap p {
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 30px;
+
+	font-size: 3em;
+	text-shadow: 0px 0px 5px #14558c;
+}
+
+footer div.copyright {
+	display: block;
+	position: absolute;
+	bottom: 70px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.8em;
+}
+
+footer div.copyright a {
+	color: rgba(255, 255, 255, 0.5);
+	transition: all 0.3s;
+}
+
+footer div.copyright a:hover {
+	color: white;
+}
+
+/**
+ * Footer menu
+ */
+nav#footer {
+	position: absolute;
+	bottom: 132px;
+	right: 80px;
+	font-size: 1em;
+}
+
+nav#footer a {
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	border-radius: 3px;
+
+	color: white;
+	text-decoration: none;
+	line-height: 100%;
+
+	transition: all 0.3s;
+}
+
+nav#footer a:hover {
+	background-color: white;
+	color: #14558c;
+}
+
+/**
+* Copyright
+**/
+
+footer div.copyright img {
+	display: block;
+	margin-bottom: 20px;
+}
+
+@media (max-device-width: 1200px) {
+	footer div.wrap {
+		padding-left: 300px;
+	}
+}

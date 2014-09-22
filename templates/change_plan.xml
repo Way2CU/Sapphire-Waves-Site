@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="upgrade"/>
+			</title>
+
+			<cms:collection include="dialog,communicator,page_control"/>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+			/>
+			<cms:script src="https://www.google.com/jsapi"/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:module name="shop" action="include_scripts"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<cms:raw file="parts/gtm_container.txt"/>
+			<header>
+				<cms:template file="parts/top_bar.xml"/>
+			</header>
+
+			<div class="change-plan-wrap">
+				<div id="content" class="change-plan" skip_cache="1">
+					<div class="inner_wrap">
+						<h1><cms:text constant="menu_change_plan"/></h1>
+						<cms:guest>
+							<cms:text constant="dashboard_login_required"/>
+						</cms:guest>
+
+						<cms:user>
+							<cms:desktop>
+								<div class="plan_box free">
+									<h1>
+										<cms:text constant="plan_free"/>
+										<span><cms:text constant="plan_free_under_h1"/></span>
+									</h1>
+									<div>
+										<ul>
+											<li><cms:text constant="plan_free_days"/></li>
+											<li><cms:text constant="plan_free_hours"/></li>
+										</ul>
+										<div class="terms">
+											<cms:text constant="plan_free_terms"/>
+										</div>
+										<div class="price">
+											<span>
+												<cms:text constant="free_price"/>
+											</span>
+										</div>
+									</div>
+
+									<div class="button">
+									</div>
+								</div>
+							</cms:desktop>
+
+							<cms:mobile>
+								<span>
+									This page is not available on mobile at the time.
+								</span>
+							</cms:mobile>
+
+							<div class="plan_box middle standard">
+								<cms:module
+									name="shop"
+									action="show_recurring_plan"
+									plan="standard"
+									template="parts/plan.xml"
+									payment_method="paypal_express"
+								/>
+							</div>
+
+							<div class="plan_box sapphire">
+								<cms:module
+									name="shop"
+									action="show_recurring_plan"
+									plan="sapphire"
+									template="parts/plan.xml"
+									payment_method="paypal_express"
+								/>
+							</div>
+						</cms:user>
+					</div>
+				</div>
+			</div>
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

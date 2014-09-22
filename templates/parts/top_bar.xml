@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<div id="top_bar">
+		<div class="wrap">
+			<!-- Logo -->
+			<cms:desktop>
+				<a href="url_Make()" cms:eval="href">
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						width="181"
+						height="64"
+						alt="MainLanguageHandler::getInstance()->getText('site_title')"
+						cms:eval="src,alt"
+					/>
+				</a>
+			</cms:desktop>
+
+			<!-- Social media icons -->
+			<div class="social_container">
+				<cms:guest>
+					<a
+						href="'http://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('referral', 'home'))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_facebook')"
+						cms:eval="href,title"
+						/>
+					<a
+						href="'http://twitter.com/share?url='.urlencode(url_Make('referral', 'home'))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_twitter')"
+						cms:eval="href,title"
+						/>
+					<a
+						href="'https://plus.google.com/share?url='.urlencode(url_Make('referral', 'home'))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_google')"
+						cms:eval="href,title"
+						/>
+				</cms:guest>
+
+				<cms:user>
+					<a
+						href="'http://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_facebook')"
+						cms:eval="href,title"
+						/>
+					<a
+						href="'http://twitter.com/share?url='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_twitter')"
+						cms:eval="href,title"
+						/>
+					<a
+						href="'https://plus.google.com/share?url='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+						target="_blank"
+						title="MainLanguageHandler::getInstance()->getText('label_share_google')"
+						cms:eval="href,title"
+						/>
+				</cms:user>
+			</div>
+
+			<!-- Top menu -->
+			<nav id="top" skip_cache="1">
+				<a href="url_Make('', 'contact_us')" cms:eval="href" class="contact-us">
+					<cms:text constant="menu_contact_us"/>
+				</a>
+
+				<!-- Guest options -->
+				<cms:guest>
+					<div>
+						<a class="button login original" href="javascript:void(0);">
+							<cms:text constant="menu_sign_in"/>
+						</a>
+						<div class="pop-up">
+							<cms:template file="parts/login_form.xml"/>
+						</div>
+						<div class="pop-up">
+							<cms:template file="parts/recovery_form.xml"/>
+						</div>
+					</div>
+					<div>
+						<a class="button sign-up original" href="javascript:void(0);">
+							<cms:text constant="menu_sign_up"/>
+						</a>
+						<div class="pop-up">
+							<cms:template file="parts/signup_form.xml"/>
+						</div>
+					</div>
+				</cms:guest>
+
+				<!-- User options -->
+				<cms:user>
+					<a
+						href="url_Make('', 'widget')"
+						cms:eval="href"
+						class="call_to_action start"
+						data-event="Start-Now"
+						>
+						<cms:text constant="start"/>
+					</a>
+
+					<div class="control_panel_widget">
+						<cms:desktop>
+							<img
+								src="gravatar_Get($_SESSION['username'], 50)"
+								alt="$_SESSION['fullname']"
+								cms:eval="src,alt"
+								width="50"
+								height="50"
+								class="avatar"
+							/>
+						</cms:desktop>
+						<cms:mobile>
+							<img
+								src="gravatar_Get($_SESSION['username'], 80)"
+								alt="$_SESSION['fullname']"
+								cms:eval="src,alt"
+								width="80"
+								height="80"
+								class="avatar"
+								/>
+						</cms:mobile>
+
+						<h2>
+							<span><cms:text constant="message_welcome"/></span>
+							<cms:var name="$_SESSION['fullname']"/>
+						</h2>
+
+						<!-- Settings menu -->
+						<a
+							href="javascript:void(0);"
+							class="settings original"
+							>
+							<cms:text constant="label_settings"/>
+						</a>
+						<div class="pop-up">
+							<nav id="settings">
+								<a href="url_Make('change-plan', 'user')" cms:eval="href">
+									<cms:text constant="upgrade"/>
+								</a>
+								<a href="url_Make('control-panel', 'user')" cms:eval="href">
+									<cms:text constant="control_panel"/>
+								</a>
+								<hr/>
+								<a href="javascript:void(0);" class="logout">
+									<cms:text constant="logout"/>
+								</a>
+							</nav>
+						</div>
+
+						<span class="remaining_time">
+							<cms:choice value="sapphire_waves::getInstance()->getPlan()" cms:eval="value">
+								<option value="2">
+									<cms:text constant="message_time_used"/>
+									<cms:module
+										name="sapphire_waves"
+										action="show_used_time"
+										/>
+								</option>
+
+								<option value="0" default="1">
+									<cms:text constant="message_time_remaining"/>
+									<cms:module
+										name="sapphire_waves"
+										action="show_remaining_time"
+										/>
+								</option>
+							</cms:choice>
+						</span>
+					</div>
+				</cms:user>
+			</nav>
+		</div>
+	</div>
+</document>

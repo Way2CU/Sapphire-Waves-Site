@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+				/>
+			<cms:script src="_BASEURL.'/site/scripts/widget.min.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<header>
+				<div class="inner_wrap">
+					<span><cms:text constant="header_upper_text"/></span>
+					<h3><cms:text constant="header_h1"/></h3>
+					<div class="call_to_action">
+						<a
+							href="https://sapphirewaves.com/widget"
+							class="call_to_action start"
+							>
+							<cms:text constant="try_now_link"/>
+						</a>
+						<a
+							href="javascript:void(0)"
+							class="call_to_action sign-up original"
+							>
+							<cms:text constant="sign_up_link"/>
+						</a>
+						<div class="pop-up">
+							<cms:template
+								file="parts/signup_form.xml"
+								path="_BASEPATH.'/site/templates/'"
+								cms:eval="path"
+								/>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="wrap white">
+				<div class="inner_wrap">
+					<span><cms:text constant="wrap_white_span"/></span>
+					<h2><cms:text constant="wrap_white_h2"/></h2>
+					<div class="testimonials_container">
+						<cms:module
+							name="tips"
+							action="show_list"
+							text_id="testimonials_wrap_white"
+							template="parts/testimonials.xml"
+							/>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap bg">
+				<span><cms:text constant="wrap_bg_span"/></span>
+				<h2><cms:text constant="wrap_bg_h2"/></h2>
+
+				<div id="video_player"/>
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="homepage_video"
+					embed="1"
+					width="525"
+					height="300"
+					player_id="video_player"
+					autohide="1"
+					/>
+			</div>
+
+			<div class="wrap white two">
+				<div class="inner_wrap">
+					<span><cms:text constant="wrap_white_second_span"/></span>
+					<h2><cms:text constant="wrap_white_second_h2"/></h2>
+					<div class="works_container">
+						<cms:module
+							name="articles"
+							action="show_list"
+							text_id="articles_works"
+							template="parts/articlebg.xml"
+							/>
+						<div class="call_to_action">
+							<a
+								href="https://sapphirewaves.com/widget"
+								class="call_to_action start"
+								>
+								<cms:text constant="try_now_link"/>
+							</a>
+							<a
+								href="javascript:void(0)"
+								class="call_to_action sign-up"
+								>
+								<cms:text constant="sign_up_link"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap color">
+				<div class="inner_wrap">
+					<span><cms:text constant="testimonials"/></span>
+					<div class="testimonials_container">
+						<cms:module
+							name="articles"
+							action="show_list"
+							text_id="testimonials_wrap_color"
+							template="parts/article.xml"
+							/>
+					</div>
+					<h2><cms:text constant="checkout"/></h2>
+					<h5><cms:text constant="tracy"/></h5>
+					<div id="video_player2"/>
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="homepage_video2"
+						embed="1"
+						width="800"
+						height="600"
+						player_id="video_player2"
+						autohide="1"
+						/>
+					<span><cms:text constant="drinking_water"/></span>
+					<h2><cms:text constant="smart_app"/></h2>
+					<h4><cms:text constant="learn"/></h4>
+					<div class="call_to_action">
+						<a
+							href="https://sapphirewaves.com/widget"
+							class="call_to_action start"
+							>
+							<cms:text constant="try_now_link"/>
+						</a>
+						<a
+							href="javascript:void(0)"
+							class="call_to_action sign-up"
+							>
+							<cms:text constant="sign_up_link"/>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				<img
+					src="_BASEURL.'/site/images/logo.svg'"
+					alt="site_title"
+					cms:eval="src"
+					cms:constant="alt"
+					/>
+			</footer>
+		</body>
+	</html>
+</document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<div class="call_to_action">
+		<!-- Information -->
+		<cms:guest>
+			<h3>
+				<cms:text constant="find_out_how"/>
+			</h3>
+		</cms:guest>
+
+		<!-- Buttons -->
+		<a
+			class="watch_video"
+			href="url_Make('how-to-video', 'documents')"
+			title="MainLanguageHandler::getInstance()->getText('title_watch_video')"
+			cms:eval="href,title"
+			data-event="Watch-Video"
+			>
+			<cms:text constant="watch_video"/>
+		</a>
+		<cms:guest>
+			<cms:if condition="sapphire_waves::getInstance()->trialAvailable()">
+				<a
+					href="url_Make('', 'widget')"
+					class="call_to_action start"
+					data-event="Try-Now"
+					cms:eval="href"
+					>
+					<cms:text constant="try_now"/>
+				</a>
+			</cms:if>
+
+			<cms:if condition="!sapphire_waves::getInstance()->trialAvailable()">
+				<a
+					href="javascript:void(0);"
+					class="call_to_action sign-up"
+					data-event="Free-Trial"
+					>
+					<cms:text constant="free_trial"/>
+				</a>
+			</cms:if>
+		</cms:guest>
+		<cms:user>
+			<a
+				href="url_Make('change-plan', 'user')"
+				class="call_to_action"
+				cms:eval="href"
+				data-event="Change-Plan"
+				data-delay-event="1"
+				>
+				<cms:text constant="menu_change_plan"/>
+			</a>
+		</cms:user>
+
+		<!-- Information -->
+		<cms:guest>
+			<div>
+				<cms:if condition="sapphire_waves::getInstance()->trialAvailable()">
+					<cms:text constant="no_registration_required"/>
+				</cms:if>
+
+				<cms:if condition="!sapphire_waves::getInstance()->trialAvailable()">
+					<cms:text constant="no_credit_card"/>
+				</cms:if>
+			</div>
+		</cms:guest>
+	</div>
+</document>

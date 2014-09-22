@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<cms:desktop>
+		<li style="'background-image: url('.$params['image'].');'" cms:eval="style">
+			<a
+				class="testimonial"
+				href="url_Make('view', 'testimonials', array('id', $params['id']))"
+				title="$params['title'][$language]"
+				cms:eval="href,title"
+				data-event="Testimonial"
+				>
+				<cms:var name="$params['title'][$language]"/>
+			</a>
+		</li>
+	</cms:desktop>
+
+	<cms:mobile>
+		<li style="'background-image: url('.$params['image'].');'" cms:eval="style">
+			<a
+				class="testimonial mobile"
+				href="'http://www.youtube.com/watch?v='.$params['video_id']"
+				title="$params['title'][$language]"
+				cms:eval="href,title"
+				data-event="Testimonial"
+			>
+				<cms:var name="$params['title'][$language]"/>
+			</a>
+		</li>
+	</cms:mobile>
+</document>

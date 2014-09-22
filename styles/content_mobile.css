@@ -1,0 +1,644 @@
+/**
+ * Mobile Content Style Sheet
+ * Sapphire Waves
+ *
+ * Copyright (c) 2014. by Way2CU
+ * Author: Eyal Gershon and Mladen Mijatov
+ */
+
+ div#content {
+	display: block;
+}
+
+div#content.inner-page {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+}
+
+div#content div.wrap.blue {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	background-color: #5686ec;
+	background-image: 
+			url(../images/content_gradient.png),
+			url(../images/content_background.png);
+	background-position: center top, center top;
+	background-repeat: repeat-x, repeat-y;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+
+	color: white;
+}
+
+div#content div.wrap div.inner_wrap {
+	display: block;
+
+}
+
+div#content div.wrap div.inner_wrap.spaced {
+	margin-bottom: 40px;
+}
+
+div.wrap.blue h1.anchor {
+	border-color: white;
+	color: white;
+	margin: 0px;
+	margin-bottom: 15px;
+	padding-top: 55px;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+/**
+ * Benefits
+ **/
+div#benefits ul {
+	display: block;
+	margin: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	list-style-type: none;
+	list-style-image: none;
+}
+
+div#benefits ul li {
+	display: inline-block;
+
+	position: relative;
+	opacity: 1;
+
+	text-align: center;
+	padding-top: 240px;
+
+	background-repeat: no-repeat;
+	background-position: center top;
+
+}
+
+div#benefits ul li:nth-of-type(1){
+	background-image: url('/images/benefits-girl.jpg');
+}
+
+div#benefits ul li:nth-of-type(2){
+	background-image: url('/images/benefits-baby.jpg');
+} 
+
+div#benefits ul li:nth-of-type(3){
+	background-image: url('/images/benefits-sleeping.jpg');	
+} 
+
+/**
+ * Forms
+ */
+div.form form {
+	display: block;
+	width: 250px;
+	min-height: 50px;
+	position: relative;
+
+	padding: 20px;
+
+	font-size: 0.9em;
+}
+
+div.form form a {
+	display: block;
+	margin-top: 10px;
+
+	color: #14548b;
+}
+
+div.form form a:hover {
+	color: #1669e6;
+}
+
+div.form form a:visited {
+	color: #53278e;
+}
+
+div.form form div.captcha {
+	display: none;
+}
+
+div.form label {
+	display: block;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+div.form label span {
+	display: block;
+	margin-bottom: 2px;
+}
+
+div.form span.description {
+	color: #909090;
+}
+
+div.form label input {
+	width: 238px;
+	padding: 5px;
+
+	border: 1px solid #70b5e4;
+	border-radius: 3px;
+	background-color: white;
+	box-shadow: 0px 0px 3px #70b5e4;
+
+	font-family: Ubuntu;
+
+	transition: 0.3s all;
+}
+
+div.form label input:focus {
+	outline: none;
+	border-color: #f07723;
+	box-shadow: 0px 0px 5px #f07723;
+}
+
+div.form label input.invalid {
+	border-color: red;
+	box-shadow: 0px 0px 5px red;
+}
+
+div.form label.checkbox span {
+	display: inline-block;
+}
+
+div.form label.checkbox span:before {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+
+	position: relative;
+	top: 3px;
+
+	margin-right: 4px;
+
+	content: ' ';
+	
+	border: 1px solid #70b5e4;
+	border-radius: 7px;
+	background-color: white;
+	background-image: url(../images/checkbox.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 3px #70b5e4;
+
+	transition: 0.3s all;
+}
+
+div.form label.checkbox input {
+	display: none;
+}
+
+div.form label.checkbox input:checked + span:before {
+	background-position: left bottom;
+}
+
+div.form label.captcha {
+	position: relative;
+}
+
+div.form label.captcha span,
+div.form label.captcha input {
+	width: 70px;
+}
+
+div.form label.captcha img {
+	display: block;
+	width: 122px;
+	height: 38px;
+
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+div.form label.captcha button {
+	width: 16px;
+	height: 16px;
+
+	margin: 0px;
+	margin-left: 5px;
+	padding: 13px;
+
+	background-image:
+				url(../images/refresh.png),
+				linear-gradient(top, #70b5e4 0%, #70b5e4 80%, #407dce 100%);
+	background-image:
+				url(../images/refresh.png),
+				-moz-linear-gradient(top, #70b5e4 0%, #689bdd 80%, #407dce 100%);
+	background-image:
+				url(../images/refresh.png),
+				-webkit-linear-gradient(top, #70b5e4 0%, #689bdd 80%, #407dce 100%);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	vertical-align: top;
+}
+
+div.form div.controls {
+	padding-top: 10px;
+}
+
+div.form div.controls a.password-recovery {
+	display: inline-block;
+	width: 50%;
+	
+	margin: 0px;
+	padding: 0px;
+
+	float: right;
+
+	text-align: right;
+}
+
+div.form button {
+	display: inline-block;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	border: 1px solid #2970cc;
+	border-radius: 5px;
+	background-color: #407dce;
+	background-image: linear-gradient(top, #70b5e4 0%, #70b5e4 80%, #407dce 100%);
+	background-image: -moz-linear-gradient(top, #70b5e4 0%, #689bdd 80%, #407dce 100%);
+	background-image: -webkit-linear-gradient(top, #70b5e4 0%, #689bdd 80%, #407dce 100%);
+	box-shadow: inset 0px 1px 0px white, 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+	color: white;
+	font-size: 1em;
+	font-family: Ubuntu;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #333333;
+	text-decoration: none;
+}
+
+div.form button:focus {
+	outline: none;
+}
+
+div.form button:active {
+	box-shadow: inset 0px 1px 0px #2970cc, inset 0px -1px 0px white, 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+div.form hr {
+	display: block;
+
+	margin-bottom: 10px;
+	padding-top: 10px;
+
+	border: none;
+	border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+div.form div.overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	border-radius: 7px;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-image: url(../images/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/**
+ * Take the test
+ **/
+ #take_the_test {
+	background-color: rgba(0, 0, 0, 0.22);
+	padding: 10px;
+	padding-bottom: 0px;
+}
+
+div.test_steps {
+	margin-bottom: 30px;
+
+	position: relative;
+	left: 0px;
+
+	font-size: 1.1em;
+}
+
+div.test_steps span {
+	display: block;
+	text-align: center;
+	font-size: 2.3em;
+}
+
+div.test_steps p {
+	text-align: center;
+}
+
+div.wrap.blue .taste_difference {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+div.test_steps {
+	padding-bottom: 266px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+div.test_steps:nth-of-type(1) {
+	background-image: url(../images/step1.png);	
+}
+
+div.test_steps:nth-of-type(2) {
+	background-image: url(../images/step2.png);	
+}
+
+div.test_steps:nth-of-type(3) {
+	background-image: url(../images/step3.png);
+	margin-bottom: 0px;	
+
+}
+
+/**
+* How does it work
+**/
+#what_does_it_do img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#what_does_it_do h3 {
+	text-align: left;
+	border-bottom: 1px solid;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	font-weight: normal;
+	color: #283679;
+}
+
+div#what_does_it_do p {
+	text-align: left;
+	padding: 10px;
+	padding-top: 0px;
+	margin-top: -10px;
+}
+
+div#what_does_it_do .one_third {
+	text-align: center;
+}
+
+/**
+ * References
+ **/
+div#references h1 {
+	color: #283679;
+	text-align: center;
+	margin-top: 25px;
+	font-weight: bold;
+}
+
+div#references h2 {
+	color: #283679;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+div#references h3 {
+	margin-top: -10px;
+
+	color: #14558c;
+	text-align: center;
+}
+
+div.reference_articles {
+	display: block;
+	padding-top: 30px;
+}
+
+div#references.inner_wrap p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div#references h3 {
+	margin-top: -10px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #283679;
+	font-weight: 100;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.reference.reference1 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/brain.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference.reference2 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/dove.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference.reference3 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/bomb.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference.reference4 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/heart.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference.reference5 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/flower.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference.reference6 p {
+	padding-top: 260px;
+	background-image: url(../images/references/250/tap.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.reference p a {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/**
+ * Testimonials
+ **/
+div#testimonials ul {
+	display: block;
+
+	margin: 0px;
+	padding: 0px;
+
+	list-style-type: none;
+	list-style-image: none;
+}
+
+div#testimonials ul li {
+	display: block;
+
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 380px 285px;
+}
+
+div#testimonials ul li a {
+	display: block;
+
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 300px;
+
+	color: #14558c;
+	font-size: 1.5em;
+	text-align: center;
+	text-decoration: none;
+}
+
+div#content div.wrap div.inner_wrap.spaced h1.anchor {
+	color: #283679;
+	text-align: center;
+	margin-top: 25px;
+	font-weight: bold;
+}
+/**
+* Other elements
+**/
+h1.anchor {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0px;
+	padding-bottom: 10px;
+
+	border-bottom: 1px solid #14558c;
+
+	font-size: 2.3em;
+	font-weight: 100;
+	text-align: center;
+	line-height: 100%;
+}
+
+/**
+ * Call to action
+ */
+a.call_to_action {
+	display: block;
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	border: 1px solid #c67517;
+	border-radius: 5px;
+	background-color: #faaf3a;
+	background-image: linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	background-image: -moz-linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	background-image: -webkit-linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	box-shadow: inset 0px 1px 0px white, 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+	color: #323232;
+	font-size: 1.5em;
+	text-shadow: 0px 1px 1px white;
+	text-decoration: none;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+/**
+ * Image optimizations for different pixel densities.
+ */
+
+@media (min-resolution: 1.5dppx) and (max-resolution: 2dppx) {
+	.reference.reference1 p {
+		background-image: url(../images/references/375/brain.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference2 p {
+		background-image: url(../images/references/375/dove.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference3 p {
+		background-image: url(../images/references/375/bomb.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference4 p {
+		background-image: url(../images/references/375/heart.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference5 p {
+		background-image: url(../images/references/375/flower.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference6 p {
+		background-image: url(../images/references/375/tap.jpg);
+		background-size: 250px;
+	}
+}
+
+@media (min-resolution: 2dppx) {
+	.reference.reference1 p {
+		background-image: url(../images/references/500/brain.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference2 p {
+		background-image: url(../images/references/500/dove.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference3 p {
+		background-image: url(../images/references/500/bomb.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference4 p {
+		background-image: url(../images/references/500/heart.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference5 p {
+		background-image: url(../images/references/500/flower.jpg);
+		background-size: 250px;
+	}
+
+	.reference.reference6 p {
+		background-image: url(../images/references/500/tap.jpg);
+		background-size: 250px;
+	}
+}

@@ -1,0 +1,6 @@
+<document>
+	<div class="article">
+		<h3><cms:var name="$params['title'][$language]"/></h3>
+		<cms:markdown param="content" multilanguage="yes"/>
+	</div>
+</document>

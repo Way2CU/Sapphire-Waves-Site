@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<div id="feedback_form">
+		<form action="url_Make()" cms:eval="action" method="POST">
+			<h1><cms:text constant="title_feedback"/></h1>
+			<label>
+				<textarea
+					name="message"
+					cols="50"
+					rows="3"
+					placeholder="MainLanguageHandler::getInstance()->getText('label_contact_message')"
+					cms:eval="placeholder"
+					/>
+			</label>
+
+			<div class="controls">
+				<button type="submit"><cms:text constant="send"/></button>
+				<button type="button" class="close"><cms:text constant="cancel"/></button>
+			</div>
+
+			<div class="overlay"/>
+		</form>
+	</div>
+</document>

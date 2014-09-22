@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/template.dtd">
+<document>
+	<div class="testimonial">
+		<cms:markdown param="content" multilanguage="yes"/>
+		<cms:mobile>
+			<a href="javascript: void(0);" class="arrow"/>
+		</cms:mobile>
+	</div>
+</document>

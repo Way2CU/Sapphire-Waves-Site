@@ -7,6 +7,13 @@
 	<module name="page_info" order="3" preload="yes"/>
 	<module name="language_menu" order="4" preload="yes"/>
 	<module name="captcha" order="0" preload="no"/>
+	<module name="shop" order="1" preload="no"/>
+	<module name="paypal" order="2" preload="no"/>
+	<module name="sapphire_waves" order="3" preload="no"/>
+	<module name="contact_form" order="4" preload="no"/>
+	<module name="youtube" order="5" preload="no"/>
+	<module name="mandrill" order="6" preload="no"/>
+	<module name="activity_tracker" order="7" preload="no"/>
 	
 	<user 
 		fullname="Administrator" 

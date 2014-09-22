@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<h1>
+		<cms:var name="$params['name'][$language]"/>
+		<span>
+			<cms:text
+				constant="'plan_'.$params['text_id'].'_under_h1'"
+				cms:eval="constant"
+			/>
+		</span>
+	</h1>
+	<div>
+		<ul>
+			<li>
+				<cms:text
+					constant="'plan_'.$params['text_id'].'_days'"
+					cms:eval="constant"
+				/>
+			</li>
+			<li>
+				<cms:text
+					constant="'plan_'.$params['text_id'].'_hours'"
+					cms:eval="constant"
+				/>
+			</li>
+		</ul>
+		<div class="terms">
+			<cms:text
+				constant="'plan_'.$params['text_id'].'_terms'"
+				cms:eval="constant"
+				/>
+		</div>
+		<div class="price">
+			<span>
+				<cms:var name="round($params['price'])"/>
+				<small><cms:raw text="$"/></small>
+				<span>
+					<cms:text constant="per_month"/>
+				</span>
+			</span>
+		</div>
+	</div>
+	<div class="button">
+		<cms:if condition="$params['selected']">
+			<span class="already_active"><cms:text constant="already_selected"/></span>
+		</cms:if>
+		
+		<cms:if condition="!$params['selected']">
+			<a href="url_Make($params['text_id'], 'checkout')" cms:eval="href">
+				<cms:var name="$params['name'][$language]"/>
+			</a>
+		</cms:if>
+	</div>
+
+</document>

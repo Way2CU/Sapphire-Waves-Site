@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<img
+		src="$params['url']"
+		alt="$params['alt']"
+		cms:eval="src,alt,data-source"
+		data-source="$params['url']"
+	/>
+</document>

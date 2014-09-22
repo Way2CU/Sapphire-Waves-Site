@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<div id="slides">
+		<!-- Main Slide -->
+		<div class="slide" id="main-slide">
+			<div class="message">
+				<span class="bigger"><cms:text constant="title_first_slide"/></span>
+				<span class="smaller"><cms:text constant="message_first_slide"/></span>
+
+				<table cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td>
+							<img
+								src="_BASEURL.'/site/images/steps/1.svg'"
+								alt="Step 1"
+								height="65"
+								cms:eval="src"
+								/>
+							<span><cms:text constant="slide_step_1"/></span>
+						</td>
+						<td>
+							<img
+								src="_BASEURL.'/site/images/steps/2.svg'"
+								alt="Step 2"
+								height="65"
+								cms:eval="src"
+								/>
+							<span><cms:text constant="slide_step_2"/></span>
+						</td>
+						<td>
+							<img
+								src="_BASEURL.'/site/images/steps/3.svg'"
+								alt="Step 3"
+								height="65"
+								cms:eval="src"
+								/>
+							<span><cms:text constant="slide_step_3"/></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="animation">
+				<img
+					src="_BASEURL.'/site/images/screen.png'"
+					alt="Screen"
+					class="screen"
+					cms:eval="src"
+					/>
+				<img
+					src="_BASEURL.'/site/images/widget-small.png'"
+					alt="Widget"
+					class="widget"
+					cms:eval="src"
+					/>
+				<img
+					src="_BASEURL.'/site/images/glass.png'"
+					alt="Glass"
+					class="glass"
+					cms:eval="src"
+					/>
+			</div>
+		</div>
+
+		<!-- First slide -->
+		<div class="slide" id="1">
+			<div class="message">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="slide1_text"
+					template="parts/article_no_title.xml"
+				/>
+			</div>
+
+			<div class="animation">
+				<img
+					src="_BASEURL.'/site/images/slides/1/droplet.svg'"
+					alt="Droplet"
+					cms:eval="src"
+					class="droplet"
+					width="48"
+					height="74"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/1/tree.svg'"
+					alt="Tree"
+					cms:eval="src"
+					class="tree"
+					width="198"
+					height="230"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/1/line.svg'"
+					alt="Line"
+					cms:eval="src"
+					class="line"
+					width="120"
+					height="6"
+				/>
+			</div>
+		</div>
+
+		<!-- Second slide -->
+		<div class="slide" id="2">
+			<div class="message">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="slide2_text"
+					template="parts/article_no_title.xml"
+				/>
+			</div>
+
+			<div class="animation">
+				<img
+					src="_BASEURL.'/site/images/slides/2/drop1.svg'"
+					alt="Happy Drop"
+					cms:eval="src"
+					class="drop1"
+					width="48"
+					height="76"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/drop2.svg'"
+					alt="Not So Happy Drop"
+					cms:eval="src"
+					class="drop2"
+					width="76"
+					height="48"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/drop3.svg'"
+					alt="Sad Drop"
+					cms:eval="src"
+					class="drop3"
+					width="48"
+					height="76"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/drop4.svg'"
+					alt="Almost Gone"
+					cms:eval="src"
+					class="drop4"
+					width="72"
+					height="48"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/drop5.svg'"
+					alt="Dead Drop"
+					cms:eval="src"
+					class="drop5"
+					width="48"
+					height="76"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/pipe.svg'"
+					alt="Pipes"
+					cms:eval="src"
+					class="pipe"
+					width="546"
+					height="708"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/fan.svg'"
+					alt="Fan"
+					cms:eval="src"
+					class="fan"
+					width="102"
+					height="102"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/2/glass.svg'"
+					alt="Glass"
+					cms:eval="src"
+					class="glass"
+					width="84"
+					height="111"
+				/>
+			</div>
+		</div>
+
+		<!-- Third slide -->
+		<div class="slide" id="3">
+			<div class="message">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="slide3_text"
+					template="parts/article_no_title.xml"
+				/>
+			</div>
+
+			<div class="animation">
+				<img
+					src="_BASEURL.'/site/images/slides/3/fill.svg'"
+					alt="Body"
+					cms:eval="src"
+					class="fill"
+					width="130"
+					height="366"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/gradient.svg'"
+					alt="Body"
+					cms:eval="src"
+					class="gradient"
+					width="130"
+					height="366"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/body.svg'"
+					alt="Body"
+					cms:eval="src"
+					class="body"
+					width="130"
+					height="366"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/bar.svg'"
+					alt="Bar"
+					cms:eval="src"
+					class="bar1"
+					width="120"
+					height="19"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/bar.svg'"
+					alt="Bar"
+					cms:eval="src"
+					class="bar2"
+					width="120"
+					height="19"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/bar.svg'"
+					alt="Bar"
+					cms:eval="src"
+					class="bar3"
+					width="120"
+					height="19"
+				/>
+				<img
+					src="_BASEURL.'/site/images/slides/3/bar.svg'"
+					alt="Bar"
+					cms:eval="src"
+					class="bar4"
+					width="120"
+					height="19"
+				/>
+
+				<span class="brain"><cms:text constant="label_brain"/></span>
+				<img
+					src="_BASEURL.'/site/images/slides/3/brain.svg'"
+					alt="Brain"
+					cms:eval="src"
+					class="brain"
+					width="40"
+					height="33"
+				/>
+				<span class="lungs"><cms:text constant="label_lungs"/></span>
+				<img
+					src="_BASEURL.'/site/images/slides/3/lungs.svg'"
+					alt="Lungs"
+					cms:eval="src"
+					class="lungs"
+					width="30"
+					height="33"
+				/>
+				<span class="heart"><cms:text constant="label_heart"/></span>
+				<img
+					src="_BASEURL.'/site/images/slides/3/heart.svg'"
+					alt="Heart"
+					cms:eval="src"
+					class="heart"
+					width="20"
+					height="33"
+				/>
+				<span class="liver"><cms:text constant="label_liver"/></span>
+				<img
+					src="_BASEURL.'/site/images/slides/3/liver.svg'"
+					alt="Liver"
+					cms:eval="src"
+					class="liver"
+					width="37"
+					height="21"
+				/>
+
+				<div class="overlay"/>
+				<div class="overlay"/>
+				<div class="overlay"/>
+				<div class="overlay"/>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<div class="controls"/>
+
+		<!-- Call to action -->
+		<cms:template file="parts/slide_buttons.xml"/>
+	</div>
+</document>

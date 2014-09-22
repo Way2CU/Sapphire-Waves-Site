@@ -1,12 +1,11 @@
 /**
  * Main JavaScript
- * Site Name
+ * Sapphire Waves
  *
- * Copyright (c) 2014. by Way2CU, http://way2cu.com
- * Authors:
+ * Copyright (c) 2014. by Way2CU
+ * Author: Mladen Mijatov
  */
 
-function on_site_load() {
-}
-
-$(on_site_load);
+var shop_init_options = {
+		'visible': false
+	};

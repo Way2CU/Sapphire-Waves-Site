@@ -1,0 +1,13 @@
+/**
+ * Main Style Sheet
+ * Site Name
+ *
+ * Copyright (c) 2014. by Way2CU, http://way2cu.com
+ * Authors:
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+
+body {
+	font-family: Ubuntu;
+}

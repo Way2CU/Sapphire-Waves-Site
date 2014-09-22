@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="upgrade"/>
+			</title>
+
+			<cms:collection include="dialog,communicator,page_control"/>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+			/>
+			<cms:script src="https://www.google.com/jsapi"/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:module name="shop" action="include_scripts"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<cms:raw file="parts/gtm_container.txt"/>
+			<header>
+				<cms:template file="parts/top_bar.xml"/>
+			</header>
+
+			<div id="content" skip_cache="1">
+				<cms:module
+					name="shop"
+					action="set_recurring_plan"
+					text_id="$action"
+					cms:eval="text_id"
+					/>
+				<cms:module
+					name="shop"
+					action="show_checkout_form"
+					include_shipping="0"
+					/>
+			</div>
+
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

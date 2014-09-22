@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="control_panel"/>
+			</title>
+
+			<cms:collection include="dialog,communicator,page_control"/>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+			/>
+			<cms:script src="https://www.google.com/jsapi"/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/control_panel.js'" cms:eval="src"/>
+			<cms:module name="shop" action="include_scripts"/>
+			<cms:module name="head_tag" action="print_tag"/>
+			<script type="text/javascript">
+				google.load('visualization', '1.0', {packages: ['corechart']});
+			</script>
+		</head>
+
+		<body>
+			<cms:raw file="parts/gtm_container.txt"/>
+			<header>
+				<cms:template file="parts/top_bar.xml"/>
+			</header>
+
+			<div class="wrap_control_panel">
+				<div id="content" class="control-panel" skip_cache="1">
+					<div class="inner_wrap">
+						<h1><cms:text constant="label_account_dashboard"/></h1>
+						<cms:guest>
+							<cms:text constant="dashboard_login_required"/>
+						</cms:guest>
+
+						<cms:user>
+							<cms:desktop>
+								<div class="two_thirds">
+
+									<div class="sub_status">
+										<h3><cms:text constant="label_subscription_status"/></h3>
+										<div id="usage_statistics"/>
+									</div>
+
+									<div class="social_share">
+										<h4><cms:text constant="label_share"/></h4>
+										<div class="social_container">
+											<a
+												href="'http://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+												cms:eval="href"
+												target="_blank"
+												>
+												<cms:text constant="label_share_facebook"/>
+											</a>
+											<a
+												href="'http://twitter.com/share?url='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+												cms:eval="href"
+												target="_blank"
+												>
+												<cms:text constant="label_share_twitter"/>
+											</a>
+											<a
+												href="'https://plus.google.com/share?url='.urlencode(url_Make('referral', 'home', array('id', $_SESSION['uid'])))"
+												cms:eval="href"
+												target="_blank"
+												>
+												<cms:text constant="label_share_google"/>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="one_third">
+									<div class="plan_options">
+										<h3><cms:text constant="label_plan_options"/></h3>
+										<div class="plan_options_links">
+											<cms:if condition="sapphire_waves::getInstance()->isFreeUser()">
+												<a href="url_Make('change-plan', 'user')" cms:eval="href">
+													<span><cms:text constant="menu_upgrade_plan"/></span>
+												</a>
+											</cms:if>
+
+											<cms:if condition="!sapphire_waves::getInstance()->isFreeUser()">
+												<a href="url_Make('change-plan', 'user')" cms:eval="href">
+													<span><cms:text constant="menu_change_plan"/></span>
+												</a>	
+												<a href="url_Make('cancel-plan', 'user')" cms:eval="href">
+													<span><cms:text constant="menu_cancel_plan"/></span>
+												</a>
+											</cms:if>
+										</div>
+									</div>
+
+									<div class="account_settings">
+										<h3><cms:text constant="label_account_settings"/></h3>
+										<form action="url_Make()" cms:eval="action" method="post"> 
+											<label>
+												<span><cms:text constant="label_current_password"/></span>
+												<input
+													type="password"
+													name="current_password"
+													/>
+											</label>
+											<label>
+												<span><cms:text constant="label_new_password"/></span>
+												<input
+													type="password"
+													name="new_password"
+													/>
+											</label>						
+											<label>
+												<span><cms:text constant="label_password_repeat"/></span>
+												<input
+													type="password"
+													name="repeat_password"
+													/>
+											</label>
+
+											<div class="controls">
+												<button type="submit"><cms:text constant="submit"/></button>
+											</div>
+											<div class="overlay"/>
+										</form>
+									</div>
+								</div>
+							</cms:desktop>
+
+							<cms:mobile>
+								<span>
+									This page is not available on mobile at the time.
+								</span>
+							</cms:mobile>
+						</cms:user>
+					</div>
+				</div>
+			</div>
+
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

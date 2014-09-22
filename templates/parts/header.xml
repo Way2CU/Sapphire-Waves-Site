@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<!-- Container used for contact form and feedback -->
+	<div id="top_container"/>
+
+	<!-- Store referral to session -->
+	<cms:if condition="$action == 'referral'">
+		<cms:session
+			name="sapphire_waves_referral"
+			value="fix_id($_REQUEST['id'])"
+			cms:eval="value"
+			once="yes"
+		/>
+	</cms:if>
+
+	<!-- Check for user account verification -->
+	<cms:if condition="$section == 'user' and $action == 'verify'">
+		<cms:module
+			name="backend"
+			action="verify_account"
+		/>
+	</cms:if>
+
+	<header class="fat">
+		<!-- Top bar -->
+		<cms:template file="parts/top_bar.xml"/>
+
+		<!-- Fixed title -->
+		<cms:mobile>
+			<div id="mobile_top" class="mobile_title">
+				<div>
+					<a href="javascript:void(0)" class="menu"></a>
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						alt="MainLanguageHandler::getInstance()->getText('site_title')"
+						cms:eval="src,alt"
+						height="40"
+					/>
+					<cms:guest>
+						<a href="javascript:void(0);" class="sign-up call_to_action">
+							<cms:text constant="menu_sign_up"/>
+						</a>
+					</cms:guest>
+				</div>
+			</div>
+		</cms:mobile>
+
+		<!-- Slides -->
+		<cms:desktop><cms:template file="parts/slides.xml"/></cms:desktop>
+
+		<!-- Main menu -->
+		<nav id="main" class="mobile_menu">
+			<cms:desktop>
+				<a href="#top" class="logo">
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						alt="MainLanguageHandler::getInstance()->getText('site_title')"
+						cms:eval="src,alt"
+						height="47"
+					/>
+				</a>
+			</cms:desktop>
+
+			<a href="#take_the_test"><cms:text constant="menu_take_the_test"/></a>
+			<a href="#testimonials"><cms:text constant="menu_testimonials"/></a>
+			<a href="#what_does_it_do"><cms:text constant="menu_what_does_it_do"/></a>
+			<a href="#references"><cms:text constant="menu_references"/></a>
+			<a href="#benefits"><cms:text constant="menu_benefits"/></a>
+
+			<cms:desktop>
+				<cms:guest>
+					<a href="javascript:void(0);" class="call_to_action sign-up start" data-event="Sign-Up-Menu">
+						<cms:text constant="menu_sign_up"/>
+					</a>
+				</cms:guest>
+
+				<cms:user>
+					<a
+						class="call_to_action start"
+						href="url_Make('', 'widget')"
+						cms:eval="href"
+						data-event="Start-Now-Menu"
+					>
+						<cms:text constant="start"/>
+					</a>
+				</cms:user>
+			</cms:desktop>
+		</nav>
+	</header>
+</document>

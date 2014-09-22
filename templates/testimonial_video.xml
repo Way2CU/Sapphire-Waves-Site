@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:module
+		name="youtube"
+		action="show"
+		id="fix_id($_REQUEST['id'])"
+		cms:eval="id"
+		embed="1"
+		width="800"
+		height="450"
+		player_id="video_player"
+		theme="light"
+		autohide="0"
+		show_related="0"
+	/>
+</document>

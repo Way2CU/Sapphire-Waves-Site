@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<footer>
+		<div class="wrap">
+			<h1><cms:text constant="footer_call_to_action_1"/></h1>
+			<p><cms:text constant="footer_call_to_action_2"/></p>
+
+			<cms:guest>
+				<a href="javascript:void(0);" class="call_to_action sign-up" event-data="Sign-Up-Footer">
+					<cms:text constant="menu_sign_up"/>
+				</a>
+			</cms:guest>
+
+			<cms:user>
+				<a
+					class="call_to_action start"
+					href="url_Make('', 'widget')"
+					cms:eval="href"
+					data-event="Start-Now-Footer"
+				>
+					<cms:text constant="start"/>
+				</a>
+			</cms:user>
+
+			<!-- Footer menu -->
+			<nav id="footer">
+				<a href="url_Make('privacy-policy', 'documents')" cms:eval="href"><cms:text constant="menu_privacy"/></a>
+				<a href="url_Make('terms-and-conditions', 'documents')" cms:eval="href"><cms:text constant="menu_terms"/></a>
+			</nav>
+
+			<div class="copyright">
+				<!-- Logo -->
+				<img
+					src="_BASEURL.'/site/images/logo_white.svg'"
+					width="252"
+					height="83"
+					alt="MainLanguageHandler::getInstance()->getText('site_title')"
+					cms:eval="src,alt"
+				/>
+
+				<!-- Copyright -->
+				<cms:text constant="copyright"/>
+			</div>
+		</div>
+	</footer>
+</document>
+
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_cancel_plan"/>
+			</title>
+
+			<cms:collection include="dialog,communicator,page_control"/>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+			/>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<cms:module name="shop" action="include_scripts"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<cms:raw file="parts/gtm_container.txt"/>
+			<header>
+				<cms:template file="parts/top_bar.xml"/>
+			</header>
+
+			<div class="change-plan-wrap">
+				<div id="content" class="cancel-plan">
+					<div class="inner_wrap">
+						<cms:guest>
+							<h1><cms:text constant="menu_cancel_plan"/></h1>
+							<cms:text constant="dashboard_login_required"/>
+						</cms:guest>
+
+						<cms:user>
+							<div class="two_thirds">
+								<cms:choice param="action">
+									<option value="cancel-plan-confirm" default="0">
+										<cms:module
+											name="articles"
+											action="show"
+											text_id="cancel_confirmed"
+										/>
+										<cms:module
+											name="shop"
+											action="cancel_recurring_plan"
+										/>
+									</option>
+
+									<option value="cancel-plan" default="1">
+										<cms:module
+											name="articles"
+											action="show"
+											text_id="cancel_plan"
+										/>
+										<a
+											class="action_button"
+											href="url_Make('cancel-plan-confirm', 'user')"
+											cms:eval="href"
+											>
+											<cms:text constant="confirm_plan_cancel"/>
+										</a>
+									</option>
+								</cms:choice>
+							</div>
+						</cms:user>
+					</div>
+				</div>
+			</div>
+
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

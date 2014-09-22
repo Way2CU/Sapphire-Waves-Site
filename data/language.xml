@@ -1,7 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<language name="English" short="en">
-		<constant name="site_title">Site title</constant>
+	<language name="English" short="en" default="yes">
+		<constant name="site_title">Sapphire Waves</constant>
+		<constant name="widget_title">Sapphire Waves Widget</constant>
+		<constant name="copyright"><![CDATA[Developed by <a href="http://way2cu.com">Way2CU</a>. All rights reserved.]]></constant>
+
+		<constant name="menu_contact_us">Contact Us</constant>
+		<constant name="menu_sign_in">Log in</constant>
+		<constant name="menu_sign_up">Sign Up</constant>
+		<constant name="menu_benefits">Benefits</constant>
+		<constant name="menu_take_the_test">Take the test</constant>
+		<constant name="menu_what_does_it_do">What does it do?</constant>
+		<constant name="menu_references">References</constant>
+		<constant name="menu_testimonials">Testimonials</constant>
+		<constant name="menu_terms"><![CDATA[Terms & Conditions]]></constant>
+		<constant name="menu_privacy">Privacy Policy</constant>
+		<constant name="menu_upgrade_plan">Upgrade plan</constant>
+		<constant name="menu_change_plan">Change plan</constant>
+		<constant name="menu_cancel_plan">Cancel plan</constant>
+
+		<constant name="message_user_created">New account has been created. In order to use this account you will have to verify it by following the link provided in verification email.</constant>
+
+		<constant name="take_the_test">Take The Test</constant>
+		<constant name="test_step1_content">Fill two glasses with regular tap water. One glass will be your control glass.</constant>
+		<constant name="test_step2_content">Place one of the glasses close to "Sapphire Waves" app for 10 minutes.</constant>
+		<constant name="test_step3_content">Take a sip from the energized glass and then from the other glass.</constant>
+		<constant name="taste_the_difference">Taste the difference!</constant>
+
+		<constant name="slide_step_1">Place a glass of water in front of your monitor.</constant>
+		<constant name="slide_step_2">Run Sapphire Waves for 10 minutes.</constant>
+		<constant name="slide_step_3">Compare and taste the difference.</constant>
+		
+		<constant name="how_does_it_work_text_topleft"><![CDATA[<h3>Restores Water</h3><p>Sapphire Waves is a simple, innovative app for restoring water to its purest form. It revitalizes and recharges water with the vital energies and healing properties that encourage growth and development.</p>]]></constant>
+		<constant name="how_does_it_work_text_bottomleft"><![CDATA[<h3>Simple and Safe</h3><p>Simply place a glass of water or milk formula with water inside close to the Sapphire Waves app displayed on your computer screen or smartphone, after 10 minutes you will have a revitalized water.</p>]]></constant>
+		<constant name="how_does_it_work_text_topright"><![CDATA[<h3>100% External</h3><p>No chemicals, additives or supplements are added to the water. By channeling electromagnetic energy of the universe Sapphire Waves app helps you feel better and easier to go through daily challenges.</p>]]></constant>
+		<constant name="how_does_it_work_text_bottomright"><![CDATA[<h3>Years of Research</h3><p>Sapphire Waves app is a result of long research and exhaustive testing that is perfectly safe for mother and baby.</p>]]></constant>
+		
+		<constant name="references_first_title"><![CDATA[<h2>without changing the chemical composition of the water you can rearrange the molecular arrangement</h2>]]></constant>
+		<constant name="references_first_p">In past decade phenomenal amount of researchers started researching water and water potential. It started because usable water is receding per person. While researching, they found out that without changing the chemical composition of the water you can rearrange the molecular arrangement in such a way that the water will behave completely in a different way.</constant>
+		
+		<constant name="label_brain">Brain</constant>
+		<constant name="label_lungs">Lungs</constant>
+		<constant name="label_heart">Heart</constant>
+		<constant name="label_liver">Liver</constant>
+		<constant name="label_username">Email address:</constant>
+		<constant name="label_password">Password:</constant>
+		<constant name="label_current_password">Current password:</constant>
+		<constant name="label_new_password">New password:</constant>
+		<constant name="label_remember_me">Keep me logged in.</constant>
+		<constant name="label_agree">I agree to the</constant>
+		<constant name="label_terms">terms and conditions</constant>
+		<constant name="label_name">Your name:</constant>
+		<constant name="label_password_repeat">Repeat password:</constant>
+		<constant name="label_captcha">Verification:</constant>
+		<constant name="label_contact_name">Your name</constant>
+		<constant name="label_contact_email">Email</constant>
+		<constant name="label_contact_message">Message</constant>
+		<constant name="label_settings">Settings</constant>
+		<constant name="label_countdown">Days left:</constant>
+		<constant name="label_account_settings">Account settings</constant>
+		<constant name="label_plan_options">Plan options</constant>
+		<constant name="label_share">Share the energy</constant>
+		<constant name="label_subscription_dates">Subscription dates</constant>
+		<constant name="label_subscription_status">Subscription status</constant>
+		<constant name="label_account_dashboard">Account dashboard</constant>
+		<constant name="label_share_facebook">Share on Facebook</constant>
+		<constant name="label_share_twitter">Share on Twitter</constant>
+		<constant name="label_share_google">Share on Google+</constant>
+		<constant name="label_date">Date</constant>
+		<constant name="label_time_used">Time used (min)</constant>
+		<constant name="label_usage_statistics">Usage statistics</constant>
+
+		<constant name="login">Log in</constant>
+		<constant name="logout">Log out</constant>
+		<constant name="upgrade">Upgrade your package</constant>
+		<constant name="control_panel">Control panel</constant>
+		<constant name="sign_up">Sign Up</constant>
+		<constant name="start">Start now</constant>
+		<constant name="beta_testing">Open Trial</constant>
+		<constant name="password_recovery">Forgot your password?</constant>
+		<constant name="plan_select">Select</constant>
+		<constant name="free_trial">Free trial</constant>
+		<constant name="try_now">Try now</constant>
+		<constant name="watch_video">Watch video</constant>
+		<constant name="no_credit_card">(no credit card required)</constant>
+		<constant name="no_registration_required">(no registration required)</constant>
+		<constant name="find_out_how">Find out how</constant>
+		<constant name="confirm_plan_cancel">Confirm plan cancelation!</constant>
+		<constant name="checkout_completed">Checkout completed</constant>
+		<constant name="checkout_canceled">Checkout canceled</constant>
+
+		<constant name="message_welcome">Welcome,&amp;nbsp;</constant>
+		<constant name="message_time_remaining">Remaining time:&amp;nbsp;</constant>
+		<constant name="message_time_used">Used time:&amp;nbsp;</constant>
+		<constant name="message_first_slide">The app that restores water's memory to its natural state.</constant>
+		<constant name="description_email">Valid email address is required as it will be used to activate your account!</constant>
+		<constant name="description_password_recovery">Please enter your email address and verification code. We will then send you an email containing link which you can use to change your password.</constant>
+		<constant name="message_login_required">You need to be logged in to use this application!</constant>
+
+		<constant name="title_sign_up">Sign Up</constant>
+		<constant name="title_password_recovery">Password Recovery</constant>
+		<constant name="title_password_change">Password Recovery</constant>
+		<constant name="title_contact_us">Contact Us</constant>
+		<constant name="title_watch_video">Sapphire Waves</constant>
+		<constant name="title_first_slide">Restore your natural balance</constant>
+
+		<constant name="contact_message_missing_fields">All fields are required. Please make sure you fill in all the information correctly before trying again. Thank you!</constant>
+		<constant name="dashboard_login_required">This page is only available to our users.</constant>
+
+		<constant name="benefit_1">Revives Your Body</constant>
+		<constant name="benefit_2">Enhance Baby Food</constant>
+		<constant name="benefit_3">Better Sleep</constant>
+		<constant name="benefit_1_text">Sapphire Waves is a revolutionary app that revitalizes the water we drink. It restores the water to its purest state by re-activating its memory therefore increasing and energizing any healing properties. </constant>
+		<constant name="benefit_2_text">After adding water to your baby’s bottle, place the bottle near the Sapphire Waves app for 10 minutes. The transference of the electromagnetic field properties, enhanced by the Sapphire Waves app, will ease the baby’s digestion and flatulence.</constant>
+		<constant name="benefit_3_text">Our brain is surrounded by fluid responsible for the blood flow to the brain. Sapphire Waves app restores the electromagnetic field of the brain to its full effect preventing sleep deprivation, fragmented sleep or bad dreams.</constant>
+
+		<constant name="footer_call_to_action_1">What are you waiting for?!</constant>
+		<constant name="footer_call_to_action_2">Restore your natural balance.</constant>
+
+		<constant name="widget_already_active">Application is already in use. If you are restarting your cycle please try again in few moments.</constant>
+		<constant name="widget_website_not_active">Application lost connection with the main site. To prevent unwanted use of your time cycle has been stopped.</constant>
+		<constant name="widget_expired">There's no available time left on your account.</constant>
+
+		<!-- Plans Page -->
+		<constant name="plan_free">Free</constant>
+		<constant name="plan_standard">Standard</constant>
+		<constant name="plan_sapphire">Sapphire</constant>
+
+		<constant name="plan_free_days">7 Days</constant>
+		<constant name="plan_free_hours">Up to 5 hours</constant>
+		<constant name="plan_free_terms">On your PC, Mac or mobile. Around 30 uses during 7 days.</constant>
+
+		<constant name="plan_standard_days">Monthly</constant>
+		<constant name="plan_standard_hours">Up to 15 hours</constant>
+		<constant name="plan_standard_terms">On your PC, Mac or mobile. Around 90 uses per month.</constant>
+
+		<constant name="plan_sapphire_days">Monthly</constant>
+		<constant name="plan_sapphire_hours">Unlimited Usage</constant>
+		<constant name="plan_sapphire_terms">On your PC, Mac or mobile. Unlimited usage.</constant>
+		
+		<constant name="plan_free_under_h1">Share and Enjoy</constant>
+		<constant name="plan_standard_under_h1">The Classic Choice</constant>
+		<constant name="plan_sapphire_under_h1">Unlimited Energy</constant>
+
+		<constant name="free_price">Free</constant>
+		<constant name="per_month">Per Month</constant>
+		<constant name="already_selected">Currently active</constant>
+
+		<!-- Landing pages -->
+		<constant name="header_upper_text">Restore Drinking Water to its revitalized form with Sapphire Waves</constant>
+		<constant name="header_h1">A smart app designed especially for moms and babies!</constant>
+		<constant name="try_now_link">Try now</constant>
+		<constant name="sign_up_link">Sign up</constant>
+		<constant name="wrap_white_span">Benefits</constant>
+		<constant name="wrap_white_h2">Sapphire Waves Gives Your Little Treasure a Head Start!</constant>
+		<constant name="wrap_bg_span">Why do I need it?</constant>
+		<constant name="wrap_bg_h2">Sapphire Waves energizes water in flat 10 minutes – without any additives or chemicals!</constant>
+		<constant name="wrap_white_second_span">How does it work ?</constant>
+		<constant name="wrap_white_second_h2">Restore Energy in Water with the Sapphire Waves Widget</constant>
+		<constant name="testimonials">Testimonials</constant>
+		<constant name="checkout">Check out our satisfied clients tell you about the product</constant>
+		<constant name="tracy">Tracy Glendale, Wayne NJ</constant>
+		<constant name="drinking_water">Restore Drinking Water to its revitalized form with Sapphire Waves</constant>
+		<constant name="smart_app">A smart app designed especially for moms and babies!</constant>
+		<constant name="learn">Learn more at our main site Take the Sapphire waves TEST:</constant>
 	</language>
 </document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<cms:module
+		name="backend"
+		action="save_unpriviledged_user_timer"
+	/>
+	<div id="signup_form" class="form">
+		<form action="url_Make()" method="POST" cms:eval="action">
+			<label>
+				<span><cms:text constant="label_name"/></span>
+				<input
+					name="fullname"
+					type="text"
+					maxlength="100"
+					data-required="1"
+				/>
+			</label>
+			<label>
+				<span><cms:text constant="label_username"/></span>
+				<input
+					name="email"
+					type="email"
+					maxlength="50"
+					data-required="1"
+				/>
+			</label>
+			<span class="description">
+				<cms:text constant="description_email"/>
+			</span>
+			<hr/>
+			<label>
+				<span><cms:text constant="label_password"/></span>
+				<input
+					name="password"
+					maxlength="50"
+					type="password"
+					data-required="1"
+				/>
+			</label>
+			<label>
+				<span><cms:text constant="label_password_repeat"/></span>
+				<input
+					name="password_repeat"
+					maxlength="50"
+					type="password"
+					data-required="1"
+				/>
+			</label>
+			<label class="checkbox">
+				<input name="agreed" type="checkbox" data-required="1"/>
+				<span>
+					<cms:text constant="label_agree"/>
+					<cms:raw text=" "/>
+					<a
+						href="url_Make('terms-and-conditions', 'documents')"
+						cms:eval="href"
+						target="_blank"
+					>
+						<cms:text constant="label_terms"/>
+					</a>
+					<cms:raw text="."/>
+				</span>
+			</label>
+			<!-- <hr/> -->
+			<!-- <div class="captcha visible"> -->
+			<!-- 	<label class="captcha"> -->
+			<!-- 		<cms:module -->
+			<!-- 			name="captcha" -->
+			<!-- 			action="print_image_tag" -->
+			<!-- 			template="parts/captcha_image.xml" -->
+			<!-- 		/> -->
+			<!-- 		<span><cms:text constant="label_captcha"/></span> -->
+			<!-- 		<input name="captcha" type="number" autocomplete="off" data-required="1"/> -->
+			<!-- 	</label> -->
+			<!-- 	<button type="button" class="reload_captcha"/> -->
+			<!-- </div> -->
+
+			<div class="controls">
+				<button type="submit"><cms:text constant="sign_up"/></button>
+			</div>
+			<div class="overlay"/>
+		</form>
+	</div>
+</document>

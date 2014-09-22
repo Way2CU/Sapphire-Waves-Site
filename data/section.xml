@@ -2,6 +2,47 @@
 <!DOCTYPE document SYSTEM "../units/schema/section.dtd">
 <document>
 	<section name="home">
-		<language name="all" file="home.xml" />
+		<language name="all" file="home.xml"/>
+	</section>
+	<section name="user">
+		<language name="all">
+			<action name="_default" file="home.xml"/>
+			<action name="recover-password" file="password_recovery.xml"/>
+			<action name="control-panel" file="control_panel.xml"/>
+			<action name="change-plan" file="change_plan.xml"/>
+			<action name="cancel-plan" file="cancel_plan.xml"/>
+			<action name="cancel-plan-confirm" file="cancel_plan.xml"/>
+			<action name="verify" file="home.xml"/>
+		</language>
+	</section>
+	<section name="checkout">
+		<language name="all" file="checkout.xml"/>
+	</section>
+	<section name="testimonials">
+		<language name="all">
+			<action name="view" file="testimonial_video.xml"/>
+		</language>
+	</section>
+	<section name="contact-us">
+		<language name="all">
+			<action name="_default" file="contact_us.xml"/>
+			<action name="feedback" file="feedback.xml"/>
+		</language>
+	</section>
+	<section name="widget">
+		<language name="all" file="widget.xml"/>
+	</section>
+	<section name="documents">
+		<language name="all">
+			<action name="terms-and-conditions" file="terms_and_conditions.xml"/>
+			<action name="privacy-policy" file="privacy_policy.xml"/>
+			<action name="how-to-video" file="how_to_video.xml"/>
+		</language>
+	</section>
+	<section name="shop">
+		<language name="all">
+			<action name="checkout_completed" file="checkout_completed.xml"/>
+			<action name="checkout_canceled" file="checkout_canceled.xml"/>
+		</language>
 	</section>
 </document>

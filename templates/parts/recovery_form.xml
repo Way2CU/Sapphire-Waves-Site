@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<div id="password_recovery_form" class="form">
+		<form action="url_Make()" method="POST" cms:eval="action">
+			<span class="description">
+				<cms:text constant="description_password_recovery"/>
+			</span>
+			<hr/>
+			<label>
+				<span><cms:text constant="label_username"/></span>
+				<input
+					name="username"
+					type="email"
+					maxlength="50"
+					data-required="1"
+					/>
+			</label>
+			<div class="captcha visible">
+				<label class="captcha">
+					<cms:module
+						name="captcha"
+						action="print_image_tag"
+						/>
+					<span><cms:text constant="label_captcha"/></span>
+					<input
+						name="captcha"
+						type="number"
+						autocomplete="off"
+						data-required="1"
+					/>
+				</label>
+				<button type="button" class="reload_captcha"/>
+			</div>
+
+			<div class="controls">
+				<button type="submit"><cms:text constant="send"/></button>
+			</div>
+			<div class="overlay"/>
+		</form>
+	</div>
+</document>

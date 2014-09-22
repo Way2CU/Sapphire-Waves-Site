@@ -1,15 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<!DOCTYPE document SYSTEM "../units/schema/template.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="dialog,communicator,page_control"/>
+			<cms:module
+				name="activity_tracker"
+				action="include_scripts"
+				/>
+			<cms:desktop><cms:script src="_BASEURL.'/site/scripts/slides.js'" cms:eval="src"/></cms:desktop>
+			<cms:script src="_BASEURL.'/site/scripts/jquery.outside-events.js'" cms:eval="src"/>
+			<cms:script src="_BASEURL.'/site/scripts/implement_site.js'" cms:eval="src"/>
+			<!-- Luckyorange Code -->
+			<script type='text/javascript'>
+				window.__wtw_lucky_site_id = 20130;
+
+				(function() {
+				var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+				wa.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://ca20130') + '.luckyorange.com/w.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+				})();
+			</script>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<cms:raw file="parts/gtm_container.txt"/>
+			<cms:template file="parts/header.xml"/>
+
+			<div id="content">
+				<div class="wrap blue">
+					<!-- Take the test -->
+					<div class="inner_wrap" id="take_the_test">
+						<h1 class="anchor"><cms:text constant="take_the_test"/></h1>
+						<div class="test_steps hidden">
+							<span>1</span>
+							<p><cms:text constant="test_step1_content"/></p>
+						</div>
+						<div class="test_steps odd hidden">
+							<span>2</span>
+							<p><cms:text constant="test_step2_content"/></p>
+						</div>
+						<div class="test_steps hidden">
+							<span>3</span>
+							<p><cms:text constant="test_step3_content"/></p>
+						</div>
+
+						<div class="take_the_test">
+							<span class="taste_difference hidden"><cms:text constant="taste_the_difference"/></span>
+							<cms:if condition="sapphire_waves::getInstance()->trialAvailable()">
+								<a
+									href="url_Make('', 'widget')"
+									class="call_to_action start hidden"
+									cms:eval="href"
+									data-event="Try-Now"
+									>
+									<cms:text constant="take_the_test"/>
+								</a>
+							</cms:if>
+							<cms:if condition="!sapphire_waves::getInstance()->trialAvailable()">
+								<a
+									href="javascript:void(0);"
+									class="call_to_action sign-up hidden"
+									data-event="Free-Trial-Middle"
+									>
+									<cms:text constant="free_trial"/>
+								</a>
+							</cms:if>
+						</div>
+					</div>
+
+					<!-- Testimonials -->
+					<div class="inner_wrap spaced" id="testimonials">
+						<h1 class="anchor"><cms:text constant="menu_testimonials"/></h1>
+
+						<ul>
+							<cms:module
+								name="youtube"
+								action="show_list"
+								group_text_id="testimonials"
+								template="parts/testimonial.xml"
+								/>
+						</ul>
+					</div>
+				</div>
+
+				<div class="wrap">
+					<div class="inner_wrap">
+						<!-- How does it work -->
+						<div id="what_does_it_do">
+							<h1 class="anchor"><cms:text constant="menu_what_does_it_do"/></h1>
+
+							<div class="box one_third">
+								<div class="hidden">
+									<cms:text constant="how_does_it_work_text_topleft"/>
+								</div>
+								<div class="hidden">
+									<cms:text constant="how_does_it_work_text_bottomleft"/>
+								</div>
+							</div>
+
+							<div class="box one_third">
+								<img src="_BASEURL.'/site/images/widget-design.png'" cms:eval="src" alt="Widget"/>
+							</div>
+
+							<div class="box one_third">
+								<div class="hidden">
+									<cms:text constant="how_does_it_work_text_topright"/>
+								</div>
+								<div class="hidden">
+									<cms:text constant="how_does_it_work_text_bottomright"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- References -->
+					<div class="inner_wrap" id="references">
+						<h1 class="anchor"><cms:text constant="menu_references"/></h1>
+
+						<div>
+							<cms:text constant="references_first_title"/>
+							<cms:text constant="references_second_title"/>
+							<p><cms:text constant="references_first_p"/></p>
+							<p><cms:text constant="references_second_p"/></p>
+						</div>
+
+						<div class="reference_articles">
+							<cms:module
+								name="articles"
+								action="show_list"
+								group="references"
+								template="parts/reference.xml"
+								/>
+						</div>
+					</div>
+
+					<!-- Benefits -->
+					<div class="inner_wrap" id="benefits">
+						<h1 class="anchor"><cms:text constant="menu_benefits"/></h1>
+						<ul>
+							<li>
+								<h3><cms:text constant="benefit_1"/></h3>
+								<div class="hover container_1">
+									<p><cms:text constant="benefit_1_text"/></p>
+								</div>
+							</li>
+							<li>
+								<h3><cms:text constant="benefit_2"/></h3>
+								<div class="hover container_2">
+									<p><cms:text constant="benefit_2_text"/></p>
+								</div>
+							</li>
+							<li>
+								<h3><cms:text constant="benefit_3"/></h3>
+								<div class="hover container_3">
+									<p><cms:text constant="benefit_3_text"/></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
 </document>
