@@ -9,54 +9,27 @@
 body.widget {
 	margin: 0px;
 	padding: 0px;
+	padding: 20px;
 
 	background-color: #013a67;
 	background-image: url(../images/widget_background.png);
 	background-position: center top;
 	background-repeat: repeat-both;
+
+	text-align: center;
 }
 
 div#widget-container {
-	display: block;
+	display: inline-block;
+	vertical-align: top;
 	width: 300px;
 	height: 373px;
-	margin-left: auto;
-	margin-right: auto;
 
 	position: relative;
 
 	background-image: url(../images/widget/widget.png);
 	background-position: top left;
 	background-repeat: no-repeat;
-}
-
-div.message {
-	display: block;
-
-	padding: 10px;
-
-	color: white;
-	font-size: 1.2em;
-	font-weight: normal
-	text-align: center;
-}
-
-div#widget-container div.message {
-	display: none;
-	width: 160px;
-
-	position: absolute;
-	left: 60px;
-	top: 150px;
-
-	border-radius: 20px;
-	background-color: rgba(0, 0, 0, 0.8);
-	box-shadow: 0px 0px 20px white;
-
-	font-size: 1em;
-	font-weight: 100;
-	text-align: center;
-	text-shadow: 0px 0px 3px black;
 }
 
 div#widget-container canvas {
@@ -96,4 +69,149 @@ div#display span.digit {
 	background-size: 20px 420px;
 
 	transition: all 0.3s;
+}
+
+/**
+ * Instructions list
+ */
+div#instructions {
+	display: inline-block;
+	vertical-align: top;
+	width: 450px;
+
+	margin-left: 40px;
+
+	color: white;
+}
+
+div#instructions ol {
+	display: block;
+
+	margin: 0px;
+	padding: 0px;
+
+	counter-reset: step;
+}
+
+div#instructions ol li {
+	display: inline-block;
+	vertical-align: top;
+	width: calc((100% - 86px) / 3);
+	min-height: 210px;
+
+	margin-right: 10px;
+	padding: 10px;
+	padding-top: 30px;
+
+	position: relative;
+	border: 1px solid white;
+	counter-increment: step;
+}
+
+div#instructions ol li:before {
+	position: absolute;
+	width: 1em;
+	left: 0px;
+	top: 0px;
+	content: counter(step);
+
+	border: 1px solid white;
+	border-top-width: 0px;
+	border-left-width: 0px;
+
+	color: white;
+	font-size: 2em;
+}
+
+div#instructions ol li:last-of-type {
+	margin: 0px;
+}
+
+div#instructions svg {
+	max-height: 65px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	fill: white;
+}
+
+div#instructions div.article {
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+div#instructions div.article h1 {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 15px;
+
+	color: white;
+}
+
+div#instructions div.article p {
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 10px;
+}
+
+div#instructions div.article p:last-of-type {
+	padding: 0px;
+}
+
+/**
+ * Message
+ */
+div.message {
+	display: block;
+
+	padding: 10px;
+
+	color: white;
+	font-size: 1.2em;
+	font-weight: normal
+	text-align: center;
+}
+
+div#widget-container div.message {
+	display: none;
+	width: 160px;
+
+	position: absolute;
+	left: 60px;
+	top: 150px;
+
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 0px 20px white;
+
+	font-size: 1em;
+	font-weight: 100;
+	text-align: center;
+	text-shadow: 0px 0px 3px black;
+	z-index: 1000;
+}
+
+div#widget-container div.message a.start {
+	display: inline-block;
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	border: 1px solid #c67517;
+	border-radius: 5px;
+	background-color: #faaf3a;
+	background-image: linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	background-image: -moz-linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	background-image: -webkit-linear-gradient(top, #faaf3a 0%, #f6921d 80%, #f07723 100%);
+	box-shadow: inset 0px 1px 0px white, 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+	color: #5F320E;
+	font-size: 1.5em;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+}
+
+div#widget-container div.message a.start:active {
+	box-shadow: inset 0px 1px 0px #f07723, inset 0px -1px 0px white, 0px 0px 1px rgba(0, 0, 0, 0.3);
 }

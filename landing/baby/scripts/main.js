@@ -13,11 +13,11 @@ function on_site_load() {
 		Caracal.testimonial_pages = new PageControl('div.testimonials_container', 'div.article')
 		Caracal.testimonial_pages.attachControls('div.testimonials_container nav a')
 	}
-	
-	$('div.testimonial a.arrow').click(function(event) { 
-		event.preventDefault(); 
+
+	$('div.testimonial a.arrow').click(function(event) {
+		event.preventDefault();
 		$(this).parent().toggleClass('active');
-	});	
+	});
 }
 
 $(on_site_load);

@@ -22,8 +22,39 @@
 			</cms:user>
 
 			<cms:guest>
+				<cms:svg file="steps.svg"/>
 				<cms:if condition="sapphire_waves::getInstance()->trialAvailable()">
-					<div id="widget-container"/>
+					<div id="widget-container" class="manual"/>
+
+					<div id="instructions">
+						<cms:module
+							name="articles"
+							action="show"
+							text_id="widget_instructions"
+							/>
+
+						<ol>
+							<li>
+								<svg viewBox="0 0 66 100"><use xlink:href="#icon-glass"/></svg>
+								<cms:text constant="test_step1_content"/>
+							</li>
+							<li>
+								<svg viewBox="0 0 144 100"><use xlink:href="#icon-app"></use></svg>
+								<cms:text constant="test_step2_content"/>
+							</li>
+							<li>
+								<svg viewBox="0 0 92 100"><use xlink:href="#icon-drinking"></use></svg>
+								<cms:text constant="test_step3_content"/>
+							</li>
+						</ol>
+					</div>
+
+					<script type="text/javascript">
+						if ($(window).width() &lt; 500) {
+							window.resizeBy(500, 0);
+							window.focus();
+						}
+					</script>
 				</cms:if>
 
 				<cms:if condition="!sapphire_waves::getInstance()->trialAvailable()">

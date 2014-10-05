@@ -31,15 +31,15 @@
 		<constant name="slide_step_1">Place a glass of water in front of your monitor.</constant>
 		<constant name="slide_step_2">Run Sapphire Waves for 10 minutes.</constant>
 		<constant name="slide_step_3">Compare and taste the difference.</constant>
-		
+
 		<constant name="how_does_it_work_text_topleft"><![CDATA[<h3>Restores Water</h3><p>Sapphire Waves is a simple, innovative app for restoring water to its purest form. It revitalizes and recharges water with the vital energies and healing properties that encourage growth and development.</p>]]></constant>
 		<constant name="how_does_it_work_text_bottomleft"><![CDATA[<h3>Simple and Safe</h3><p>Simply place a glass of water or milk formula with water inside close to the Sapphire Waves app displayed on your computer screen or smartphone, after 10 minutes you will have a revitalized water.</p>]]></constant>
 		<constant name="how_does_it_work_text_topright"><![CDATA[<h3>100% External</h3><p>No chemicals, additives or supplements are added to the water. By channeling electromagnetic energy of the universe Sapphire Waves app helps you feel better and easier to go through daily challenges.</p>]]></constant>
 		<constant name="how_does_it_work_text_bottomright"><![CDATA[<h3>Years of Research</h3><p>Sapphire Waves app is a result of long research and exhaustive testing that is perfectly safe for mother and baby.</p>]]></constant>
-		
+
 		<constant name="references_first_title"><![CDATA[<h2>without changing the chemical composition of the water you can rearrange the molecular arrangement</h2>]]></constant>
 		<constant name="references_first_p">In past decade phenomenal amount of researchers started researching water and water potential. It started because usable water is receding per person. While researching, they found out that without changing the chemical composition of the water you can rearrange the molecular arrangement in such a way that the water will behave completely in a different way.</constant>
-		
+
 		<constant name="label_brain">Brain</constant>
 		<constant name="label_lungs">Lungs</constant>
 		<constant name="label_heart">Heart</constant>
